@@ -1,7 +1,13 @@
+import Counter from './components/Counter';
+import Input from './components/Input';
+import ToggleOpen from './components/ToggleOpen';
+
 function App() {
   return (
     <>
-      <h1 className='text-3xl font-bold underline'>Hello world!</h1>
+      <ToggleOpen />
+      <Input />
+      <Counter />
     </>
   );
 }
