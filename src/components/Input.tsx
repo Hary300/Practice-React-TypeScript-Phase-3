@@ -5,7 +5,7 @@ export default function Input() {
 
   return (
     <div>
-      <h1>Input useInput</h1>
+      <h2>Input useInput</h2>
       <p>Hello, {value}</p>
       <input
         type='text'

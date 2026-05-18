@@ -6,7 +6,7 @@ export default function ToggleOpen() {
 
   return (
     <div>
-      <h1>Toggle Open</h1>
+      <h2>Toggle Open</h2>
       <div>{isOpen ? openEnvelope : closeEnvelope}</div>
       <button onClick={toggle}>{isOpen ? 'Close' : 'Open'}</button>
     </div>

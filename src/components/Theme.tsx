@@ -1,7 +1,7 @@
-import useLocalStorage from '../hooks/useLocalStorage';
+import useLocalStorageString from '../hooks/useLocalStorageString';
 
 export default function Theme() {
-  const [theme, setTheme] = useLocalStorage('theme', 'light');
+  const [theme, setTheme] = useLocalStorageString('theme', 'light');
 
   function toggleTheme() {
     setTheme(theme === 'light' ? 'dark' : 'light');
@@ -9,7 +9,7 @@ export default function Theme() {
 
   return (
     <div>
-      <h1>Dark Theme</h1>
+      <h2>Dark Theme</h2>
       <p>Theme: {theme}</p>
       <button onClick={toggleTheme}>Set Theme</button>
     </div>

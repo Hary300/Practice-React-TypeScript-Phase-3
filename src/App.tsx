@@ -1,10 +1,15 @@
-import Theme from './components/Theme';
+import DarkMode from './components/DarkMode';
+import DataUsers from './components/DataUsers';
+import Profile from './components/Profile';
+import SimpleTodoList from './components/SimpleTodoList';
 
 function App() {
   return (
     <>
-      <h1>Theme</h1>
-      <Theme />
+      <DarkMode />
+      <Profile />
+      <SimpleTodoList />
+      <DataUsers />
     </>
   );
 }

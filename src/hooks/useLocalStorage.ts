@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 
-export default function useLocalStorage(key: string, initialValue: string) {
-  const [value, setValue] = useState(() => {
+export default function useLocalStorage<T>(key: string, initialValue: T) {
+  const [value, setValue] = useState<T>(() => {
     const saved = localStorage.getItem(key);
-    return saved || initialValue;
+    return saved ? JSON.parse(saved) : initialValue;
   });
 
   useEffect(() => {
-    localStorage.setItem(key, value);
+    localStorage.setItem(key, JSON.stringify(value));
   }, [key, value]);
 
   return [value, setValue] as const;
