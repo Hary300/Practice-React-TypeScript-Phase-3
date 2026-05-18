@@ -1,9 +1,14 @@
-import CounterApp from './components/counter-sync-app/CounterApp';
+import Section from './components/Section';
 
 function App() {
   return (
     <>
-      <CounterApp />
+      <Section title='Profile'>
+        <p>Name: Ahmad</p>
+        <button className='bg-blue-500 px-4 py-2 rounded-2xl text-white'>
+          Edit
+        </button>
+      </Section>
     </>
   );
 }
