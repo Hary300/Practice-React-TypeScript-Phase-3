@@ -1,3 +1,4 @@
+import Alert from './components/Alert';
 import Section from './components/Section';
 
 function App() {
@@ -9,6 +10,8 @@ function App() {
           Edit
         </button>
       </Section>
+      <Alert type='success'>Data saved successfully</Alert>
+      <Alert type='error'>Failed to save data</Alert>
     </>
   );
 }
