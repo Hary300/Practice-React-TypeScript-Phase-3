@@ -1,13 +1,10 @@
-import Posts from './components/Posts';
-import Users from './components/Users';
+import Theme from './components/Theme';
 
 function App() {
   return (
     <>
-      <h1>Users</h1>
-      <Users />
-      <h1>Posts</h1>
-      <Posts />
+      <h1>Theme</h1>
+      <Theme />
     </>
   );
 }
