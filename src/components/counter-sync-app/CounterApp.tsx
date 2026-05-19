@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Display from './Display';
-import DecrementIncrement from './DecremmentIncrement';
+import DecrementIncrement from './DecrementIncrement';
 import Reset from './Reset';
 
 export default function CounterApp() {
