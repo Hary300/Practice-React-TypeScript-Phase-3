@@ -1,26 +1,19 @@
 import { Route, Routes, Link } from 'react-router-dom';
-
 import Home from './pages/Home';
-import Admin from './pages/admin-page/Admin';
-import Products from './pages/admin-page/Products';
-import Settings from './pages/admin-page/Settings';
-import Users from './pages/admin-page/Users';
+import About from './pages/About';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
     <>
       <div className='flex gap-4'>
         <Link to='/'>Home</Link>
-        <Link to='/admin'>Admin</Link>
       </div>
 
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='admin' element={<Admin />}>
-          <Route path='products' element={<Products />} />
-          <Route path='settings' element={<Settings />} />
-          <Route path='users' element={<Users />} />
-        </Route>
+        <Route path='/about' element={<About />} />
+        <Route path='/dashboard' element={<Dashboard />} />
       </Routes>
     </>
   );
