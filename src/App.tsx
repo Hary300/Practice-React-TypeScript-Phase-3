@@ -1,27 +1,26 @@
-import { Link, Route, Routes } from 'react-router-dom';
-import Products from './pages/Products';
+import { Route, Routes, Link } from 'react-router-dom';
+
 import Home from './pages/Home';
+import Admin from './pages/admin-page/Admin';
+import Products from './pages/admin-page/Products';
+import Settings from './pages/admin-page/Settings';
+import Users from './pages/admin-page/Users';
 
 function App() {
   return (
     <>
       <div className='flex gap-4'>
         <Link to='/'>Home</Link>
-        <Link to='/products/1'>product 1</Link>
-        <Link to='/products/2'>product 2</Link>
-        <Link to='/products/3'>product 3</Link>
-        <Link to='/products/4'>product 4</Link>
-        <Link to='/products/5'>product 5</Link>
-        <Link to='/products/6'>product 6</Link>
-        <Link to='/products/7'>product 7</Link>
-        <Link to='/products/8'>product 8</Link>
-        <Link to='/products/9'>product 9</Link>
-        <Link to='/products/10'>product 10</Link>
+        <Link to='/admin'>Admin</Link>
       </div>
 
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/products/:id' element={<Products />} />
+        <Route path='admin' element={<Admin />}>
+          <Route path='products' element={<Products />} />
+          <Route path='settings' element={<Settings />} />
+          <Route path='users' element={<Users />} />
+        </Route>
       </Routes>
     </>
   );
