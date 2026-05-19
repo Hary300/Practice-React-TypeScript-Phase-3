@@ -5,7 +5,7 @@ type PostParams = {
   id: string;
 };
 
-export default function Post() {
+export default function Posts() {
   const { username, id } = useParams<PostParams>();
 
   if (!username || !id) {

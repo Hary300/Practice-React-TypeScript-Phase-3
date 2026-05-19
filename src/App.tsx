@@ -2,7 +2,7 @@ import { Route, Routes, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Users from './pages/Users';
 import ProductDetail from './pages/ProductDetail';
-import Post from './pages/Post';
+import Posts from './pages/Posts';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/users/:username' element={<Users />} />
         <Route path='/products/:id' element={<ProductDetail />} />
-        <Route path='/users/:username/posts/:id' element={<Post />} />
+        <Route path='/users/:username/posts/:id' element={<Posts />} />
       </Routes>
     </>
   );
