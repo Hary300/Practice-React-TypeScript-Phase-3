@@ -1,19 +1,18 @@
 import { Route, Routes, Link } from 'react-router-dom';
 import Home from './pages/Home';
-import About from './pages/About';
-import Dashboard from './pages/Dashboard';
+import Movies from './pages/Movies';
 
 function App() {
   return (
     <>
       <div className='flex gap-4'>
         <Link to='/'>Home</Link>
+        <Link to='/movies'>Movies</Link>
       </div>
 
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/movies' element={<Movies />} />
       </Routes>
     </>
   );
