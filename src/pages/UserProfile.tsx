@@ -1,10 +1,12 @@
+import type { User } from '../types/auth';
+
 type UserProfileProps = {
-  setAuthenticated: React.Dispatch<React.SetStateAction<boolean>>;
+  setUser: React.Dispatch<React.SetStateAction<User>>;
 };
 
-export default function UserProfile({ setAuthenticated }: UserProfileProps) {
+export default function UserProfile({ setUser }: UserProfileProps) {
   function handleClick() {
-    setAuthenticated(false);
+    setUser((prev) => ({ ...prev, isAuthenticated: false, role: '' }));
   }
 
   return (
