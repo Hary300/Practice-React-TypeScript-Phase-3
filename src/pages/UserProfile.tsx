@@ -1,25 +1,24 @@
-import { useNavigate } from 'react-router-dom';
-
 type UserProfileProps = {
   setAuthenticated: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 export default function UserProfile({ setAuthenticated }: UserProfileProps) {
-  const navigate = useNavigate();
-
   function handleClick() {
     setAuthenticated(false);
-    navigate('/login');
   }
+
   return (
-    <>
-      <h1>this is your profile page</h1>
+    <div className='bg-gray-700 rounded-2xl p-4 w-fit text-gray-200 flex flex-col gap-4'>
+      <h1>This is Your Profile</h1>
+      <p>Good morning, Harry</p>
+      <p>Hope you are happy</p>
+
       <button
-        className='px-4 py-2 rounded-2xl bg-blue-500 text-white cursor-pointer'
+        className='bg-amber-100 text-black rounded-2xl cursor-pointer scale-100 transition active:scale-98'
         onClick={handleClick}
       >
         Logout
       </button>
-    </>
+    </div>
   );
 }
